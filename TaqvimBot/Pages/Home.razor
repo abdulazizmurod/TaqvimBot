@@ -1,0 +1,29 @@
+﻿@page "/"
+@using TaqvimBot.Models
+@using TaqvimBot.Services
+@inject NamozService NamozService
+
+<h1>Namoz Vaqtlari</h1>
+
+@if (NamozVaqtlari is null)
+{
+    <p>Yuklanmoqda...</p>
+}
+else
+{
+    <p>Bomdod: @NamozVaqtlari.Bomdod</p>
+    <p>Quyosh: @NamozVaqtlari.Quyosh</p>
+    <p>Peshin: @NamozVaqtlari.Peshin</p>
+    <p>Asr: @NamozVaqtlari.Asr</p>
+    <p>Shom: @NamozVaqtlari.Shom</p>
+    <p>Xufton: @NamozVaqtlari.Xufton</p>
+}
+
+@code {
+    private NamozVaqtlariModel? NamozVaqtlari;
+
+    protected override async Task OnInitializedAsync()
+    {
+        NamozVaqtlari = await NamozService.GetNamozVaqtlariAsync("Tashkent", "Uzbekistan");
+    }
+}
