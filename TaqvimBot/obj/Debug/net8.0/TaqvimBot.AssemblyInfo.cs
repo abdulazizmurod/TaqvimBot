@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaqvimBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+618b9a124efd929ebbe1b210332c157c7f71bebf")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaqvimBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaqvimBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
