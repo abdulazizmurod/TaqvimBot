@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TaqvimBot",
   "resources": {
-    "hash": "sha256-FiJao1ZJWg5Rp6DlwfhYW0bidU7ulVmAi0E45a6AKDU=",
+    "hash": "sha256-sCZ7UkHKx7athoW0TdZ73a5a+sPkeXdGDKN/H+39g1E=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.n1sf6xr5tz.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -55,7 +55,7 @@
       "System.Text.Json.wasm": "sha256-0sOfj/0bQ4bhtKAHvkB1g2gEZXEMfBlrlmcfsaN2ZAg=",
       "System.Text.RegularExpressions.wasm": "sha256-CHFZ6wJNvdsk1Q33Nj36SWEoxMf1d8WWIt7QpkqeGRY=",
       "System.wasm": "sha256-UsIFTsNRr1Sw/A0hEbTyYbQo5eHUNmMuOWT6/xaM3TE=",
-      "TaqvimBot.wasm": "sha256-zd5FOKt/qBEfXUSSv6TYSZtV5YgT9yUSxIF/7UZxVR4="
+      "TaqvimBot.wasm": "sha256-UcxXePv90bogEKMmRO2+JWqKCfmp0ZJzgdjTHcfn704="
     }
   },
   "cacheBootResources": true,
