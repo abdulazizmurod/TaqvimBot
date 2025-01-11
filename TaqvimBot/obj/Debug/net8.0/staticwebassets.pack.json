@@ -33,12 +33,16 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\Taqvim\\TaqvimBot\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "D:\\Taqvim\\TaqvimBot\\wwwroot\\imgs\\moon.jpg",
+      "PackagePath": "staticwebassets\\imgs\\moon.jpg"
     },
     {
-      "Id": "D:\\Taqvim\\TaqvimBot\\wwwroot\\sample-data\\weather.json",
-      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+      "Id": "D:\\Taqvim\\TaqvimBot\\wwwroot\\imgs\\mosque.jpg",
+      "PackagePath": "staticwebassets\\imgs\\mosque.jpg"
+    },
+    {
+      "Id": "D:\\Taqvim\\TaqvimBot\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TaqvimBot.Microsoft.AspNetCore.StaticWebAssets.props",

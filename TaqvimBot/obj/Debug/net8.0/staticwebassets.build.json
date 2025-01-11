@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "itL9Xf8f11ViKLQEwi/WmzbDb0SI0EvNbgz/k54kTac=",
+  "Hash": "S6qYquLNbKBx8I9HLDfuku1YhkjV5sQ+L6ihOZVUf9Q=",
   "Source": "TaqvimBot",
   "BasePath": "/",
   "Mode": "Root",
@@ -8054,6 +8054,44 @@
       "OriginalItemSpec": "wwwroot\\icon-192.png"
     },
     {
+      "Identity": "D:\\Taqvim\\TaqvimBot\\wwwroot\\imgs\\moon.jpg",
+      "SourceId": "TaqvimBot",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Taqvim\\TaqvimBot\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "imgs/moon.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\moon.jpg"
+    },
+    {
+      "Identity": "D:\\Taqvim\\TaqvimBot\\wwwroot\\imgs\\mosque.jpg",
+      "SourceId": "TaqvimBot",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Taqvim\\TaqvimBot\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "imgs/mosque.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imgs\\mosque.jpg"
+    },
+    {
       "Identity": "D:\\Taqvim\\TaqvimBot\\wwwroot\\index.html",
       "SourceId": "TaqvimBot",
       "SourceType": "Discovered",
@@ -8071,25 +8109,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "D:\\Taqvim\\TaqvimBot\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "TaqvimBot",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Taqvim\\TaqvimBot\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     }
   ]
 }

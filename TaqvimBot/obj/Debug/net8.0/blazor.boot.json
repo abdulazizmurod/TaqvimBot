@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TaqvimBot",
   "resources": {
-    "hash": "sha256-q+i6AQgOACIRU+ERS+9KlSKwmup0zXu9zYJjhBLjR7I=",
+    "hash": "sha256-KQIQ3qw8R76QJfkeaWTizJ0unWl0qZjepc6r046mIdM=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.j9v4u10dp2.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -212,10 +212,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "TaqvimBot.wasm": "sha256-dmNw6Yz11ezlw7wBZDqcPzxXNEPJ1fBK1jTn0IGnnZE="
+      "TaqvimBot.wasm": "sha256-YgQnmRY1uuuLua8bXr9B0SEIj6K1ry2du6sM2J8Oh7U="
     },
     "pdb": {
-      "TaqvimBot.pdb": "sha256-F665kv+sT4LoDBOuB4tX1rD3VTJfeNXUAwVVhjaJCBI="
+      "TaqvimBot.pdb": "sha256-fZ0y8h3arvnmTuFcRy3Va359VAKchFIk6SJHYDcMM2Q="
     }
   },
   "cacheBootResources": true,

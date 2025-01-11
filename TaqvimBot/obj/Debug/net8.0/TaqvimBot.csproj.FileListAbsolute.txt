@@ -1048,3 +1048,4 @@ D:\Taqvim\TaqvimBot\obj\Debug\net8.0\TaqvimBot.dll
 D:\Taqvim\TaqvimBot\obj\Debug\net8.0\refint\TaqvimBot.dll
 D:\Taqvim\TaqvimBot\obj\Debug\net8.0\TaqvimBot.pdb
 D:\Taqvim\TaqvimBot\obj\Debug\net8.0\ref\TaqvimBot.dll
+D:\Taqvim\TaqvimBot\obj\Debug\net8.0\TaqvimBot.sourcelink.json

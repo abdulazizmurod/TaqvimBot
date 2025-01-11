@@ -3,27 +3,129 @@
 @using TaqvimBot.Services
 @inject NamozService NamozService
 
-<h1>Namoz Vaqtlari</h1>
+<div class="shadowbox shadow-lg">
+    <div class="bg-img  p-3">
+        <div class="headerbox p-2">
+            <h3 class="text-center mb-2">Namoz Vaqtlari</h3>
+            <div class="text-oyat p-2">
+                <p class="text-center mb-0 custom-font-size" style="background-color: white; opacity: 1;">Albatta, namoz mo'minlarga vaqtida farz qilingandir. (Niso, 103-oyat)</p>
+            </div>
+        </div>
 
-@if (NamozVaqtlari is null)
-{
-    <p>Yuklanmoqda...</p>
-}
-else
-{
-    <p>Bomdod: @NamozVaqtlari.Bomdod</p>
-    <p>Quyosh: @NamozVaqtlari.Quyosh</p>
-    <p>Peshin: @NamozVaqtlari.Peshin</p>
-    <p>Asr: @NamozVaqtlari.Asr</p>
-    <p>Shom: @NamozVaqtlari.Shom</p>
-    <p>Xufton: @NamozVaqtlari.Xufton</p>
-}
+        <div class="bodybox p-2 mt-3 shadow-lg">
+            @if (NamozVaqtlari is null)
+            {
+                <p class="text-center fw-bold">Yuklanmoqda...</p>
+            }
+            else
+            {
+                <ul class="p-0 m-0">
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between" style="background-color: rgb(211, 211, 211);">
+                        <p class="m-0">Hozirgi Vaqt:</p>
+                        <p class="m-0">@currentTime</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Bomdod, NamozVaqtlari.Quyosh)">
+                        <p class="m-0">Bomdod:</p>
+                        @if(isActive)
+                        {
+                            <p class="m-0">@remainingTime</p>
+                        }
+                        <p class="m-0">@NamozVaqtlari.Bomdod</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Quyosh, NamozVaqtlari.Peshin)">
+                        <p class="m-0">Quyosh:</p>
+                        @if(isActive)
+                        {
+                            <p class="m-0">@remainingTime</p>
+                        }
+                        <p class="m-0">@NamozVaqtlari.Quyosh</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Peshin, NamozVaqtlari.Asr)">
+                        <p class="m-0">Peshin:</p>
+                        @if(isActive)
+                        {
+                            <p class="m-0">@remainingTime</p>
+                        }
+                        <p class="m-0">@NamozVaqtlari.Peshin</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Asr, NamozVaqtlari.Shom)">
+                        <p class="m-0">Asr:</p>
+                        @if(isActive)
+                        {
+                            <p class="m-0">@remainingTime</p>
+                        }
+                        <p class="m-0">@NamozVaqtlari.Asr</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Shom, NamozVaqtlari.Xufton)">
+                        <p class="m-0">Shom:</p>
+                        @if(isActive)
+                        {
+                            <p class="m-0">@remainingTime</p>
+                        }
+                        <p class="m-0">@NamozVaqtlari.Shom</p>
+                    </li>
+                    <li class="timebox p-2 mb-2 border d-flex justify-content-between 
+                                @GetPray(NamozVaqtlari.Xufton, NamozVaqtlari.Bomdod)">
+                        <p class="m-0">Xufton:</p>
+                        @if(isActive){<p class="m-0">@remainingTime</p>}
+                        <p class="m-0">@NamozVaqtlari.Xufton</p>
+                    </li>
+                </ul>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
     private NamozVaqtlariModel? NamozVaqtlari;
+    private string currentTime = DateTime.Now.ToString("HH:mm:ss");
+    private string remainingTime = "00:00:00";
+    private bool isActive;
 
     protected override async Task OnInitializedAsync()
     {
         NamozVaqtlari = await NamozService.GetNamozVaqtlariAsync("Tashkent", "Uzbekistan");
+
+        var timer = new System.Timers.Timer(1000); // 1 sekund
+        timer.Elapsed += (sender, e) =>
+        {
+            InvokeAsync(() =>
+            {
+                currentTime = DateTime.Now.ToString("HH:mm:ss");
+                StateHasChanged();
+            });
+        };
+        timer.Start();
+    }
+
+    private string GetPray(string prayTime1, string prayTime2)
+    {
+        isActive = false;
+        var now = DateTime.Now;
+        var prayerTime1 = DateTime.Parse(prayTime1);
+        var prayerTime2 = DateTime.Parse(prayTime2);
+        var remaining = prayerTime2 - DateTime.Now;
+
+        if(now >= prayerTime1 && now < prayerTime2)
+        {
+            isActive = true;
+            if (remaining.TotalSeconds > 0)
+            {
+                remainingTime = $"-{remaining.Hours:D2}:{remaining.Minutes:D2}:{remaining.Seconds:D2}";
+            }
+            else
+            {
+                remainingTime = "";
+            }
+            return "highlight";
+        }
+
+        return string.Empty;
+        
     }
 }
